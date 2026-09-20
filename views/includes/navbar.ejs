@@ -36,11 +36,11 @@
 
       <div class="navbar-nav ms-auto align-items-md-center">
         <a class="nav-link me-md-2" href="/listings/new">Become a host</a>
-        <% if(!curruser){ %>
+        <% if(!locals.curruser){ %>
           <a class="nav-link me-md-2" href="/singup"><b>Sign Up</b></a>
           <a class="nav-link me-md-2" href="/login"><b>Log In</b></a>
         <% } %>
-        <% if(curruser){ %>
+        <% if(locals.curruser){ %>
           <a class="nav-link me-md-2" href="/logout"><b>Log Out</b></a>
         <% } %>
       </div>
