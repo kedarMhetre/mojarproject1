@@ -1,4 +1,4 @@
-if(process.env.NODE_EVN !="production"){
+if(process.env.NODE_ENV !="production"){
     require('dotenv').config()
 }
 
@@ -22,17 +22,16 @@ const reviewsRouter = require("./routers/review.js");
 const userRouter = require("./routers/user.js");
 const { readdir } = require("fs");
 
-// const MONGO_URL="mongodb://127.0.0.1:27017/wanderlust";
-const dbUrl = process.env.ATLASDB_URL;
+const dbUrl = process.env.DB_URL || "mongodb://127.0.0.1:27017/wanderlust";
 
 main().then(()=>{
     console.log("connected to DB");
 }).catch((err)=>{
-    console.log(err);
+    console.log("DB connection error:", err);
 });
 
 async function main() {
-    await mongoose.connect(dbUrl,{family:4});
+    await mongoose.connect(dbUrl);
 }
 
 app.set("view engine","ejs");
@@ -115,6 +114,7 @@ app.use((err, req, res, next) => {
     res.status(statusCode).render ("error.ejs",{message});
 });
 
-app.listen(8080,()=>{
-    console.log("server is listening to port 8080");
+const port = process.env.PORT || 8080;
+app.listen(port,()=>{
+    console.log(`server is listening to port ${port}`);
 });

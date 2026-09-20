@@ -1,8 +1,8 @@
 <% layout("/layouts/boilerplate") %>
 
-<div class="row  mt-10 ">
-    <h1 class="col-6 offset-3">SingUp on WanderLust</h1>
-    <div class="col-6 offset-3">
+<div class="row mt-4">
+    <h2 class="col-12 col-md-6 offset-md-3 mb-3 text-center text-md-start">Sign Up on Wanderlust</h2>
+    <div class="col-12 col-md-6 offset-md-3">
         <form action="/singup" method="post" class="needs-validation" novalidate>
             <div class="mb-3">
               <label for="username" class="form-label">Username</label>
@@ -12,7 +12,7 @@
                type="text" 
                class="form-control"
                required />
-             <div class="valid-feedback">looks good!</div>
+             <div class="valid-feedback">Looks good!</div>
             </div>
 
             <div class="mb-3">
@@ -20,7 +20,7 @@
               <input 
                name="email" 
                id="email"
-               type="eamil" 
+               type="email" 
                class="form-control"
                required />
             </div>
@@ -34,7 +34,7 @@
                class="form-control"
                required />
             </div>
-            <button class="btn btn-success">SingUp</button>
+            <button class="btn btn-success w-100 w-md-auto">Sign Up</button>
         </form>
     </div>
 </div>

@@ -30,9 +30,20 @@
     <link 
      href="/css/rating.css" 
      rel="stylesheet">
-    
 </head>
 <body>
+    <!-- Minimalist Fast Splash Overlay (1.5s max) -->
+    <div id="splash-screen" class="splash-minimal">
+      <div class="splash-minimal-content">
+        <div class="minimal-flight-track">
+          <svg class="minimal-airplane" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="currentColor" d="M480 192H365.71L260.61 8.06A16 16 0 0 0 246.71 0h-45.5a16 16 0 0 0 -14.29 23.23L253 192H112l-43.14-57.52A16 16 0 0 0 56 128H16a16 16 0 0 0 -12.8 25.6L48 208l-44.8 54.4A16 16 0 0 0 16 288h40a16 16 0 0 0 12.86-6.48L112 224h141l-66.08 168.77A16 16 0 0 0 201.21 416h45.5a16 16 0 0 0 13.9-8.06L365.71 224H480a32 32 0 0 0 32-32v0a32 32 0 0 0 -32-32z"/>
+          </svg>
+        </div>
+        <h1 class="minimal-brand-title">Wanderlust</h1>
+      </div>
+    </div>
+
     <%-include("../includes/navbar.ejs") %>
     <div class="container">
          <%-include("../includes/flash.ejs") %>
